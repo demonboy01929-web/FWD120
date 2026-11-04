@@ -12,7 +12,7 @@
   --body-font: "Public Sans", Arial, sans-serif;
 }
 
-
+  
 * {
   box-sizing: border-box;
 }
@@ -1202,4 +1202,26 @@ details p {
     padding: 28px 20px;
   }
 
+}
+
+/* NOTIFICATION SEARCH */
+
+.notification-search {
+  margin-bottom: 25px;
+}
+
+.notification-search input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--body-font);
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.notification-search input:focus {
+  border-color: var(--navy);
 }
