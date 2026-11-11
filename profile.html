@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile | SAU</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="photos/saulogo.png" alt="SAU logo">
+        Admissions
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="studentportal.html">Sign Out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="profile-page">
+    <div class="wrap">
+      <div class="profile-card" id="profileContent">
+        <!-- Javascript injects profile content here -->
+      </div>
+    </div>
+  </main>
+   <script>
+    const data = JSON.parse(localStorage.getItem('sau_applicant'));
+    const container = document.getElementById('profileContent');
+
+    if (data) {
+      container.innerHTML = `
+        <div class="profile-header">
+          <h2>Applicant Dashboard</h2>
+          <span class="status-badge submitted">${data.status}</span>
+        </div>
+
+        <div class="profile-details-grid">
+          <div class="profile-detail-item">
+            <label>Full Name</label>
+            <span>${data.name}</span>
+          </div>
+
+          <div class="profile-detail-item">
+            <label>Student / App ID</label>
+            <span>${data.studentId}</span>
+          </div>
+
+          <div class="profile-detail-item">
+            <label>Email Address</label>
+            <span>${data.email}</span>
+          </div>
+
+          <div class="profile-detail-item">
+            <label>Selected Programme</label>
+            <span>${data.programme}</span>
+          </div>
+
+          <div class="profile-detail-item">
+            <label>Application Fee</label>
+            <span style="color: green; font-weight: bold;">${data.feeStatus}</span>
+          </div>
+
+          <div class="profile-detail-item">
+            <label>Entrance Exam / CET Slot</label>
+            <span>${data.examSlot}</span>
+          </div>
+
+          <div class="profile-detail-item">
+            <label>Document Verification</label>
+            <span style="color: #d97706; font-weight: bold;">${data.documentStatus}</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #f8fafc; border-radius: 8px;">
+          <h3>📋 Admission Progress Journey</h3>
+          <ul style="list-style-type: none; padding: 0; margin-top: 15px; line-height: 2;">
+            <li>✅ <strong>Step 1:</strong> Online Registration & Credentials Generated</li>
+            <li>✅ <strong>Step 2:</strong> Application Form & Fee Submission (${data.feeStatus})</li>
+            <li>🔄 <strong>Step 3:</strong> Entrance Exam Test / National Score Mapping (${data.examSlot})</li>
+            <li>⏳ <strong>Step 4:</strong> Merit List Publication & Provisional Offer Letter</li>
+            <li>⏳ <strong>Step 5:</strong> Document Verification & Final PRN Allotment</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <a class="btn" href="admissions.html">Back to Admissions</a>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `
+        <h1>No Active Profile Found</h1>
+        <p>Please submit an application form first to view your applicant profile.</p>
+        <a href="apply.html" class="btn">Go to Application Form</a>
+      `;
+    }
+  </script>
+</body>
+</html>

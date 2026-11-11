@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply | South Asian University</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="apply-custom.css"> <!-- Separated custom CSS -->
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="photos/saulogo.png" alt="SAU logo">
+        Admissions
+      </a>
+      <input type="checkbox" id="menu-toggle">
+      <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="studentportal.html">Student Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="apply-page">
+    <div class="wrap">
+      <div class="apply-card">
+        
+        <div class="apply-header-box">
+          <p class="small-heading">ADMISSIONS 2026-27 • SECURE ONLINE PORTAL</p>
+          <h1>Start Your Application</h1>
+          <p>Complete your registration details below. Upon successful submission, you will be automatically routed to your secure applicant dashboard to track entrance slots and fee payments.</p>
+        </div>
+
+        <form id="apply-form" class="apply-form" novalidate>
+
+          <h3 class="form-section-title">1. Personal Details</h3>
+
+          <div class="form-group">
+            <label for="name">Full name </label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name (as per official documents)" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="name@gmail.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+          </div>
+
+          <h3 class="form-section-title">2. Programme & Admission Pathway</h3>
+
+          <div class="form-group">
+            <label for="mode">Admission mode</label>
+            <select id="mode" name="mode" required>
+              <option value="">Select an admission mode</option>
+              <option value="entrance">SAU Entrance Test / CET Mode</option>
+              <option value="direct">Direct Admission (National Scores: JEE/CUET/CAT/GATE)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="level">Programme level</label>
+            <select id="level" name="level" required>
+              <option value="">Select a programme level</option>
+              <option value="bachelor">Bachelor's (Undergraduate)</option>
+              <option value="master">Master's (Postgraduate)</option>
+              <option value="phd">PhD (Doctoral)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="programme">Programme preference</label>
+            <select id="programme" name="programme" required disabled>
+              <option value="">Choose a level first</option>
+            </select>
+          </div>
+
+          <button class="btn apply-submit-btn" type="submit">Submit Application & Generate Dashboard →</button>
+        </form>
+
+        <p class="form-security-note">🔒 Secure local simulation session. Your credentials and form choices are safely processed locally in your browser.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-content">
+        <div>
+          <b>South Asian University</b>
+          <p>Maidan Garhi, New Delhi 110068</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="notifications.html">Notifications</a>
+          <a href="studentportal.html">Student Portal</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 South Asian University</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
